@@ -1,0 +1,53 @@
+@import 'compass/reset';
+@import 'compass';
+@import 'bootstrap';
+
+body { padding-top: ($navbarHeight + 20) }
+
+*, body, input, button, select, textarea {
+  font-family: 'Imprima', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@import 'bootstrap-responsive';
+
+.navbar .brand {
+  span {
+    @include transform(rotate(-25deg)
+                       translate(0, 2px)
+                       scale(2.0));
+    color: $blue;
+    display: inline-block;
+    font-family: 'Gochi Hand', Arial, sans-serif;
+  }
+  @include text-shadow(1px 1px 0px black);
+  font-size: 25px;
+}
+
+input {
+  margin: 0;
+}
+
+ul#tasks {
+  list-style: none;
+  @include transition(all .5s ease-in-out);
+
+  li {
+    padding: 5px;
+    border: 1px dotted #666;
+    border-left: 11px double #DADADA;
+    margin-top: -1px;
+    @include border-radius(0 10px 10px 0);
+
+    dd {
+      display: inline-block;
+
+      &.right {
+        float: right;
+      }
+    }
+  }
+}
